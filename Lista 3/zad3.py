@@ -1,3 +1,5 @@
+#Witek Aleksandra lista3 zad3
+
 from scipy import linalg
 import numpy as np
 
