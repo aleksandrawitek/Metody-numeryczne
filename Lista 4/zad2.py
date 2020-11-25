@@ -1,14 +1,11 @@
 #Witek Aleksandra lista4 zad2
 
-import numpy as np
-from scipy import optimize
-
-print("Z jakiej liczby chcesz obliczyć pierwiastek")
-x = input()
-x = float(x)
-n = 5
-y = lambda x,a: x**n-a
-dy = lambda  x,a: n*x**(n-1)
-root = optimize.newton(y, 3, fprime=dy, args=(x,))
-
-print("Pierwiastek %.0f-stopnia z %d jest równy %s" % (n,x,root))
+import math
+print("Podaj liczbę: ")
+liczba = input()
+liczba = float(liczba)
+tmp=[1]
+for x in range(0,6):
+    tmp.append(tmp[x]-(math.pow(tmp[x],5)-liczba)/(5*math.pow(tmp[x],4)))
+print("Pierwiastek 5 stopnia z tej liczby to:")
+print(tmp[6])
