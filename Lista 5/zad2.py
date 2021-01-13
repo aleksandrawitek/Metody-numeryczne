@@ -1,10 +1,7 @@
 #Witek Aleksandra lista 5 zad 2
-#do dokonczenia pochodna w punkcie
 
 import numpy as np
 from scipy import optimize
-from scipy.interpolate import lagrange
-from scipy.misc import derivative
 from sympy import *
 
 x=[1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3]
@@ -35,8 +32,8 @@ for xmax in np.arange(1,3,0.001):
     xmin=xmax
 
 #Pochodna w punkcie
-x = Symbol('x')
-fprim=w1.diff(x1)
 tekst2 = 'Pochodna w punkcie 2.1 wynosi'
+fprim = np.poly1d(w1)
+fprim2 = fprim.deriv()
 print(tekst2)
-print(fprim)
+print(fprim2(2.1))
